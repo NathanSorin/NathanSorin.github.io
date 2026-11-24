@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI and Energy – Nathan Sorin</title>
+<meta name="description" content="AI & Energy: size matters, and how you use it too. A blog post by Nathan Sorin, July 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Same look as the main site: deep blue header band, Spectral headings, Inter text, coral accent */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0d0e18);--ink:light-dark(#14110f,#ecebf3);--soft:light-dark(#5b5d6b,#a3a5b8);--line:light-dark(#e3e4ea,#262838);--blue:#0b1966;--blue2:light-dark(#1a2b9e,#8d96ff);--tint:light-dark(#f1f2f8,#151733);--coral:#ff6a4d}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 Inter,system-ui,sans-serif;overflow-x:clip}
+a{color:var(--blue2);text-underline-offset:3px}
+img{max-width:100%}
+h1,h2{font-family:Spectral,Georgia,serif;font-weight:500;letter-spacing:-.02em;line-height:1.1;text-wrap:balance;margin:0}
+nav{position:sticky;top:0;z-index:10;background:var(--blue);padding:0 max(5vw,16px)}
+nav .wrap{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px}
+nav a{color:#fff;text-decoration:none}
+nav .me{font-family:Spectral,serif;font-size:20px}
+nav .back{font-size:15px;opacity:.9}
+nav .back:hover{opacity:1;text-decoration:underline}
+header{background:var(--blue);color:#fff;padding:clamp(40px,7vw,96px) max(5vw,16px) clamp(40px,6vw,72px)}
+header .col{max-width:760px;margin:0 auto}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:#c9ceff;margin-bottom:18px}
+.kicker::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--coral)}
+header h1{font-size:clamp(34px,5.4vw,58px);color:#fff}
+.meta{margin-top:22px;color:#dfe2ff;font-size:15px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.meta b{color:#fff;font-weight:600}
+article{max-width:760px;margin:0 auto;padding:clamp(36px,5vw,64px) max(5vw,16px) 24px}
+article p{margin:0 0 1.3em}
+article h2{font-size:clamp(26px,3vw,32px);margin:1.8em 0 .6em}
+blockquote{margin:0 0 2em;padding:4px 0 4px 22px;border-left:3px solid var(--coral)}
+blockquote p{font-family:Spectral,serif;font-style:italic;font-size:clamp(22px,2.6vw,27px);line-height:1.35;margin:0 0 8px}
+blockquote cite{font-style:normal;color:var(--soft);font-size:15px}
+.lede{font-family:Spectral,serif;font-size:clamp(20px,2.2vw,23px);line-height:1.5}
+figure{margin:2em 0;background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 18px 12px}
+figure img{display:block;width:100%;height:auto}
+figcaption{color:#5b5d6b;font-size:14px;margin-top:10px}
+sup a{text-decoration:none;font-size:12px;padding:0 2px}
+.closing{font-family:Spectral,serif;font-size:clamp(20px,2.2vw,23px);line-height:1.5;border-top:1px solid var(--line);padding-top:1.2em}
+.notes{max-width:760px;margin:0 auto;padding:8px max(5vw,16px) 56px;font-size:14px;color:var(--soft)}
+.notes h2{font-size:20px;color:var(--ink);margin-bottom:10px}
+.notes ol{padding-left:20px;margin:0}
+.notes a{overflow-wrap:anywhere}
+footer{background:var(--blue);color:#fff;padding:36px max(5vw,16px)}
+footer .wrap{max-width:760px;margin:0 auto;display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:space-between}
+footer a{color:#fff}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;font-weight:500;font-size:15px;text-decoration:none;border:1.5px solid #fff;color:#fff}
+.btn:hover{background:var(--coral);border-color:var(--coral)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="me" href="../index.html">Nathan Sorin</a>
+  <a class="back" href="../index.html#interviews">← Back to Interviews &amp; Insights</a>
+</div></nav>
+
+<header><div class="col">
+  <div class="kicker">Insight · Blog post</div>
+  <h1>AI &amp; Energy: size matters, and how you use it too</h1>
+  <div class="meta"><span>By <b>Nathan Sorin</b></span><span>July 2026</span><span>About 6 min read</span></div>
+</div></header>
+
+<article>
+  <blockquote><p>“The cost of AI will converge to the cost of energy.”</p><cite>Sam Altman, CEO of OpenAI</cite></blockquote>
+
+  <p class="lede">AI systems, which simulate aspects of human intelligence, have immediate widespread economic benefits. But the datacenters required for their development, training, and use are increasing the economy's dependence on fossil energy. This tradeoff is currently only felt locally but we will all feel it if we do not act.</p>
+
+  <h2>Ireland as a cautionary tale</h2>
+  <p>Whether it is to use Google Maps, book an Airbnb, browse product recommendations on Amazon, or chat with an AI companion on Replika, we all rely to some extent on AI daily. The electricity used by datacenters in the background is not always top of mind. However, those living close to them, for example in Ireland, have started to see the influence of AI on their electricity bill lately. Ireland's climate targets are slipping out of reach as fossil energy is being purchased to keep up with a sudden rise in electricity needs due to the latest AI models<sup><a href="#n1" id="r1">1</a></sup> (see Figure 1).</p>
+
+  <figure>
+    <img src="ireland-electricity.png" alt="Line chart of Ireland's electricity trade balance in exported GWh: 28 in 2019, −644 in 2020, 151 in 2021, −252 in 2022, −3,275 in 2023 and −5,061 in 2024." width="843" height="502">
+    <figcaption>Figure 1. Irish electricity trade balance (exported GWh), 2019–2024.<sup><a href="#n2" id="r2">2</a></sup></figcaption>
+  </figure>
+
+  <h2>The AI villains: (big) models for business as usual</h2>
+  <p>In late 2022, OpenAI consecrated in the eyes of the world the idea that bigger models, trained with more data and chips, are better. The hype around ChatGPT unlocked massive amounts of available funding for AI companies, thrusting us in an era of massive scale. Generative tools like ChatGPT are now pervasively used for practical guidance, information seeking and writing. This is useful to improve the efficiency of economic processes. More cutting edge uses include the “tiny team” phenomenon where extremely profitable and scalable companies are composed of a small team of founders that manage AI agents writing code and taking care of business development for them. This boom in big AI models that run on the cloud is aggressively pushed by cloud providers as it fuels market growth, and by nations as they connect this technology to national sovereignty. In short, we are in an era of scale.</p>
+  <p>The problem is that these big general-purpose models require orders of magnitude more energy (<a href="https://dl.acm.org/doi/10.1145/3630106.3658542">Luccioni et al., 2024</a>). Moreover, energy optimization strategies paradoxically lead to more rather than less energy consumption (<a href="https://arxiv.org/abs/2510.09022">Morand et al., 2025</a>). This is what is called a rebound effect, where efficiency gains are offset by increased usage, a phenomenon observed with other technologies such as light emitting diodes (LEDs). While AI providers are buyers of “power purchase agreements”, which are supposed to compensate the use of dirty energy, the Irish case shows us that overall, this is an imperfect solution to transition to an economy powered by green energy. This additional use of fossil fuels creates tradeoffs today at a local level, such as in Ireland, where electricity prices jumped. But this additional use also creates an intertemporal tradeoff which will be felt in the future by all of us if we do not successfully organize a global energy transition. Indeed, fossil fuel use generates greenhouse gas emissions, which over time disturb the balance of natural systems. Specifically, surpassing specific emission thresholds could trigger climate tipping points with concrete impacts such as sea level rise (<a href="https://www.science.org/doi/10.1126/science.abn7950">Armstrong McKay et al., 2022</a>), which will affect everyone, although perhaps more marginalized communities that have less resources to engage in climate adaptation and are more exposed.</p>
+  <p>In summary, big AI models are currently sabotaging the energy transition because of the datacenters required to run them, and size matters. So, what now? I will argue below that how we use AI models, and especially small AI models, matters if we want to reverse the trend.</p>
+
+  <h2>The AI heroes: (small) models used for the energy transition</h2>
+  <p>AI is often deployed in unsustainable ways. However, there is an optimistic narrative suggesting AI use for climate mitigation more than compensates for its energy consumption. One estimate considers AI could reduce global emissions by 3.2–5.4 GtCO<sub>2</sub> annually by 2035 (<a href="https://www.nature.com/articles/s44168-025-00252-3">Stern et al., 2025</a>). The argument is that AI improves the efficiency and adoption of renewable energy systems in the power sector, the attractiveness and affordability of alternative proteins in the meat and dairy sector, and efficiency, as well as adoption of electric vehicles because of affordability and accessibility in the light road vehicles sector. As these are hard to abate sectors representing half of the world's emissions, it is plausible to expect big gains. In this context, smaller AI models are often used, such as decision trees or optimization algorithms to improve renewable energy production forecasting. It is worth noting however that although this is more rare, larger generative models may have some specific use cases too. For example, colleagues I met during a visiting period at the <i>Digital+Sustainable Innovation Lab</i> in Lisbon document the case of digital twins used to promote higher sustainability in cities by optimizing energy use in buildings (<a href="https://journals.sagepub.com/doi/10.1177/00081256251408430">Rezazadeh et al., 2026</a>).</p>
+
+  <h2>What now? Collective action</h2>
+  <p>My doctoral research in management (the science of collective action) relates to the environmental sustainability of business strategies leveraging AI. This journey has led me to publish on the topic with my supervisor at the <i>SKEMA Center for AI</i> (<a href="https://www.elgaronline.com/edcollchap/book/9781035346264/chapter1.xml">Pagani &amp; Sorin, 2025</a>). I also regularly interact with many firms through organizations such as <i>Impact AI</i> within the working group on AI and the environment and at events. Based on this experience, my understanding is that, at the moment, AI is deployed in large firms (the actual contributors to climate change) first and foremost to improve profitability within business-as-usual approaches. At times this may coincide with an improvement in energy efficiency. But in reality, this is not sufficient and truly innovative use cases are not pursued aggressively enough. We must make sure big AI models do not put the last nail in the coffin of the energy transition. To this end, firms must be incentivized by stronger policy and customer behavior to replace unsustainable deployment of big AI models with innovative deployment of smaller AI models. Such AI-enabled business models would align with the energy transition rather than condemn it.</p>
+  <p class="closing">In summary, for the sake of our planet and all its inhabitants, we must revisit AI's size and use.</p>
+</article>
+
+<section class="notes">
+  <h2>Notes</h2>
+  <ol>
+    <li id="n1"><a href="https://techpolicy.press/what-irelands-data-center-crisis-means-for-the-eus-ai-sovereignty-plans">What Ireland's data center crisis means for the EU's AI sovereignty plans</a>, Tech Policy Press. <a href="#r1" aria-label="Back to text">↩</a></li>
+    <li id="n2">International Energy Agency data, <a href="https://www.iea.org/countries/ireland/electricity">iea.org/countries/ireland/electricity</a>. <a href="#r2" aria-label="Back to text">↩</a></li>
+  </ol>
+</section>
+
+<footer><div class="wrap">
+  <a href="mailto:nathan.sorin@tum.de">nathan.sorin@tum.de</a>
+  <a class="btn" href="../index.html">Back to the website</a>
+</div></footer>
+
+</body>
+</html>
