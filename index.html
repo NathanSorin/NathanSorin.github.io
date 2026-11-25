@@ -3,8 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nathan Sorin</title>
+<title>Nathan Sorin – Postdoctoral Researcher, TUM School of Management</title>
 <meta name="description" content="Nathan Sorin – postdoctoral researcher at TUM. AI for business sustainability, creativity and sovereignty.">
+<meta name="author" content="Nathan Sorin">
+<!-- Google Search Console: paste your verification line on the next line, between these comments -->
+
+<!-- end of Google Search Console line -->
+<link rel="canonical" href="https://nathansorin.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Nathan Sorin – Postdoctoral Researcher, TUM">
+<meta property="og:description" content="I study AI for business: sustainability, creativity and sovereignty.">
+<meta property="og:url" content="https://nathansorin.github.io/">
+<meta property="og:image" content="https://nathansorin.github.io/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Nathan Sorin", "url": "https://nathansorin.github.io/", "image": "https://nathansorin.github.io/photo.jpg", "jobTitle": "Postdoctoral Researcher", "email": "mailto:nathan.sorin@tum.de", "worksFor": {"@type": "Organization", "name": "TUM School of Management, Technical University of Munich", "department": "Chair of Technology and Innovation Management"}, "alumniOf": [{"@type": "CollegeOrUniversity", "name": "SKEMA Business School"}, {"@type": "CollegeOrUniversity", "name": "Université Côte d'Azur"}, {"@type": "CollegeOrUniversity", "name": "emlyon business school"}, {"@type": "CollegeOrUniversity", "name": "Université Jean Moulin Lyon 3"}], "knowsAbout": ["Artificial intelligence", "AI for business", "Sustainability", "Creativity", "Digital sovereignty", "Innovation management", "Technology management"], "sameAs": ["https://www.linkedin.com/in/nathan-sorin/", "https://scholar.google.com/citations?user=-hM6YywAAAAJ&hl=en", "https://theses.fr/2026COAZ0008"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -279,6 +293,7 @@ footer small{margin-top:32px}
 </head>
 <body>
 
+<noscript><div style="padding:24px max(5vw,16px);max-width:900px"><h1>Nathan Sorin</h1><p>Postdoctoral Researcher at the TUM School of Management, Technical University of Munich (Chair of Technology and Innovation Management). Previously Ph.D. at SKEMA Business School (SKEMA Center for AI) and visiting Ph.D. student at Católica Lisbon School of Business &amp; Economics. I study AI for business: sustainability, creativity and sovereignty.</p><p>Contact: nathan.sorin@tum.de</p></div></noscript>
 <nav><div class="wrap">
   <a class="me" href="#top" id="navName"></a>
   <div class="links">
@@ -618,7 +633,7 @@ $("mail").textContent = S.email; $("mail").href = "mailto:" + S.email;
 $("addr").textContent = S.address;
 $("social").innerHTML = S.links.map(l => `<a class="btn" href="${esc(l.url)}">${esc(l.label)}</a>`).join("");
 $("copy").textContent = `© ${new Date().getFullYear()} ${S.name}`;
-document.title = S.name;
+
 /* Behind the photo: a light AI network. */
 const net = $("net");
 const drawNet = () => {
